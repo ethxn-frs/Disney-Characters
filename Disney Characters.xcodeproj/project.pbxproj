@@ -9,21 +9,33 @@
 /* Begin PBXBuildFile section */
 		AA077A812B55BA7A00DEABE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA077A802B55BA7A00DEABE9 /* AppDelegate.swift */; };
 		AA077A832B55BA7A00DEABE9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA077A822B55BA7A00DEABE9 /* SceneDelegate.swift */; };
-		AA077A852B55BA7A00DEABE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA077A842B55BA7A00DEABE9 /* ViewController.swift */; };
-		AA077A882B55BA7A00DEABE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA077A862B55BA7A00DEABE9 /* Main.storyboard */; };
+		AA077A852B55BA7A00DEABE9 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA077A842B55BA7A00DEABE9 /* TabBarController.swift */; };
 		AA077A8A2B55BA7B00DEABE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA077A892B55BA7B00DEABE9 /* Assets.xcassets */; };
 		AA077A8D2B55BA7B00DEABE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA077A8B2B55BA7B00DEABE9 /* LaunchScreen.storyboard */; };
+		AA077A9C2B55BF8500DEABE9 /* FilmAndSerie.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA077A9B2B55BF8500DEABE9 /* FilmAndSerie.swift */; };
+		AA077A9E2B55BFBA00DEABE9 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA077A9D2B55BFBA00DEABE9 /* Character.swift */; };
+		AA077AA02B55BFCE00DEABE9 /* VideoGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA077A9F2B55BFCE00DEABE9 /* VideoGame.swift */; };
+		AA18BA882B55CA650016683A /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA18BA872B55CA650016683A /* CharacterViewController.swift */; };
+		AA18BA8A2B55CA810016683A /* VideoGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA18BA892B55CA810016683A /* VideoGameViewController.swift */; };
+		AA18BA8C2B55CA8E0016683A /* FilmAndSerieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA18BA8B2B55CA8E0016683A /* FilmAndSerieViewController.swift */; };
+		AA18BA8E2B55CAA60016683A /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA18BA8D2B55CAA60016683A /* SettingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AA077A7D2B55BA7A00DEABE9 /* Disney Characters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Disney Characters.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA077A802B55BA7A00DEABE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA077A822B55BA7A00DEABE9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AA077A842B55BA7A00DEABE9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AA077A872B55BA7A00DEABE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AA077A842B55BA7A00DEABE9 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		AA077A892B55BA7B00DEABE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA077A8C2B55BA7B00DEABE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA077A8E2B55BA7B00DEABE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA077A9B2B55BF8500DEABE9 /* FilmAndSerie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmAndSerie.swift; sourceTree = "<group>"; };
+		AA077A9D2B55BFBA00DEABE9 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		AA077A9F2B55BFCE00DEABE9 /* VideoGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoGame.swift; sourceTree = "<group>"; };
+		AA18BA872B55CA650016683A /* CharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewController.swift; sourceTree = "<group>"; };
+		AA18BA892B55CA810016683A /* VideoGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoGameViewController.swift; sourceTree = "<group>"; };
+		AA18BA8B2B55CA8E0016683A /* FilmAndSerieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmAndSerieViewController.swift; sourceTree = "<group>"; };
+		AA18BA8D2B55CAA60016683A /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +68,85 @@
 		AA077A7F2B55BA7A00DEABE9 /* Disney Characters */ = {
 			isa = PBXGroup;
 			children = (
-				AA077A802B55BA7A00DEABE9 /* AppDelegate.swift */,
-				AA077A822B55BA7A00DEABE9 /* SceneDelegate.swift */,
-				AA077A842B55BA7A00DEABE9 /* ViewController.swift */,
-				AA077A862B55BA7A00DEABE9 /* Main.storyboard */,
-				AA077A892B55BA7B00DEABE9 /* Assets.xcassets */,
-				AA077A8B2B55BA7B00DEABE9 /* LaunchScreen.storyboard */,
+				AA077A9A2B55BBE200DEABE9 /* Ressources */,
+				AA077A992B55BBDD00DEABE9 /* Managers */,
+				AA077A982B55BBCD00DEABE9 /* ApiClient */,
+				AA077A972B55BBC300DEABE9 /* ViewModels */,
+				AA077A962B55BBBD00DEABE9 /* Views */,
+				AA077A952B55BBB700DEABE9 /* Models */,
+				AA077A942B55BBAA00DEABE9 /* Controllers */,
 				AA077A8E2B55BA7B00DEABE9 /* Info.plist */,
 			);
 			path = "Disney Characters";
+			sourceTree = "<group>";
+		};
+		AA077A942B55BBAA00DEABE9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AA18BA862B55CA430016683A /* Core */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AA077A952B55BBB700DEABE9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AA077A9B2B55BF8500DEABE9 /* FilmAndSerie.swift */,
+				AA077A9D2B55BFBA00DEABE9 /* Character.swift */,
+				AA077A9F2B55BFCE00DEABE9 /* VideoGame.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AA077A962B55BBBD00DEABE9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AA077A972B55BBC300DEABE9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		AA077A982B55BBCD00DEABE9 /* ApiClient */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ApiClient;
+			sourceTree = "<group>";
+		};
+		AA077A992B55BBDD00DEABE9 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		AA077A9A2B55BBE200DEABE9 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				AA077A892B55BA7B00DEABE9 /* Assets.xcassets */,
+				AA077A8B2B55BA7B00DEABE9 /* LaunchScreen.storyboard */,
+				AA077A802B55BA7A00DEABE9 /* AppDelegate.swift */,
+				AA077A822B55BA7A00DEABE9 /* SceneDelegate.swift */,
+			);
+			path = Ressources;
+			sourceTree = "<group>";
+		};
+		AA18BA862B55CA430016683A /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				AA077A842B55BA7A00DEABE9 /* TabBarController.swift */,
+				AA18BA872B55CA650016683A /* CharacterViewController.swift */,
+				AA18BA892B55CA810016683A /* VideoGameViewController.swift */,
+				AA18BA8B2B55CA8E0016683A /* FilmAndSerieViewController.swift */,
+				AA18BA8D2B55CAA60016683A /* SettingViewController.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +209,6 @@
 			files = (
 				AA077A8D2B55BA7B00DEABE9 /* LaunchScreen.storyboard in Resources */,
 				AA077A8A2B55BA7B00DEABE9 /* Assets.xcassets in Resources */,
-				AA077A882B55BA7A00DEABE9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +219,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA077A852B55BA7A00DEABE9 /* ViewController.swift in Sources */,
+				AA18BA8A2B55CA810016683A /* VideoGameViewController.swift in Sources */,
+				AA077A9C2B55BF8500DEABE9 /* FilmAndSerie.swift in Sources */,
+				AA077AA02B55BFCE00DEABE9 /* VideoGame.swift in Sources */,
+				AA18BA882B55CA650016683A /* CharacterViewController.swift in Sources */,
+				AA077A852B55BA7A00DEABE9 /* TabBarController.swift in Sources */,
+				AA18BA8E2B55CAA60016683A /* SettingViewController.swift in Sources */,
+				AA18BA8C2B55CA8E0016683A /* FilmAndSerieViewController.swift in Sources */,
+				AA077A9E2B55BFBA00DEABE9 /* Character.swift in Sources */,
 				AA077A812B55BA7A00DEABE9 /* AppDelegate.swift in Sources */,
 				AA077A832B55BA7A00DEABE9 /* SceneDelegate.swift in Sources */,
 			);
@@ -147,14 +235,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AA077A862B55BA7A00DEABE9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AA077A872B55BA7A00DEABE9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AA077A8B2B55BA7B00DEABE9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -297,7 +377,6 @@
 				INFOPLIST_FILE = "Disney Characters/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -325,7 +404,6 @@
 				INFOPLIST_FILE = "Disney Characters/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
