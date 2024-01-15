@@ -7,6 +7,8 @@
 
 import UIKit
 
+
+/// Controller to show and search for videos games
 final class VideoGameViewController: UIViewController {
 
     override func viewDidLoad() {

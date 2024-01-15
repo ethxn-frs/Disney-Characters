@@ -19,6 +19,9 @@
 		AA18BA8A2B55CA810016683A /* VideoGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA18BA892B55CA810016683A /* VideoGameViewController.swift */; };
 		AA18BA8C2B55CA8E0016683A /* FilmAndSerieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA18BA8B2B55CA8E0016683A /* FilmAndSerieViewController.swift */; };
 		AA18BA8E2B55CAA60016683A /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA18BA8D2B55CAA60016683A /* SettingViewController.swift */; };
+		AA18BA902B55CF3F0016683A /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA18BA8F2B55CF3F0016683A /* Service.swift */; };
+		AA18BA922B55CF4E0016683A /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA18BA912B55CF4E0016683A /* Request.swift */; };
+		AA18BA942B55CFD00016683A /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA18BA932B55CFD00016683A /* EndPoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		AA18BA892B55CA810016683A /* VideoGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoGameViewController.swift; sourceTree = "<group>"; };
 		AA18BA8B2B55CA8E0016683A /* FilmAndSerieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmAndSerieViewController.swift; sourceTree = "<group>"; };
 		AA18BA8D2B55CAA60016683A /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		AA18BA8F2B55CF3F0016683A /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		AA18BA912B55CF4E0016683A /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		AA18BA932B55CFD00016683A /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +121,9 @@
 		AA077A982B55BBCD00DEABE9 /* ApiClient */ = {
 			isa = PBXGroup;
 			children = (
+				AA18BA8F2B55CF3F0016683A /* Service.swift */,
+				AA18BA912B55CF4E0016683A /* Request.swift */,
+				AA18BA932B55CFD00016683A /* EndPoint.swift */,
 			);
 			path = ApiClient;
 			sourceTree = "<group>";
@@ -219,7 +228,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA18BA942B55CFD00016683A /* EndPoint.swift in Sources */,
 				AA18BA8A2B55CA810016683A /* VideoGameViewController.swift in Sources */,
+				AA18BA922B55CF4E0016683A /* Request.swift in Sources */,
 				AA077A9C2B55BF8500DEABE9 /* FilmAndSerie.swift in Sources */,
 				AA077AA02B55BFCE00DEABE9 /* VideoGame.swift in Sources */,
 				AA18BA882B55CA650016683A /* CharacterViewController.swift in Sources */,
@@ -227,6 +238,7 @@
 				AA18BA8E2B55CAA60016683A /* SettingViewController.swift in Sources */,
 				AA18BA8C2B55CA8E0016683A /* FilmAndSerieViewController.swift in Sources */,
 				AA077A9E2B55BFBA00DEABE9 /* Character.swift in Sources */,
+				AA18BA902B55CF3F0016683A /* Service.swift in Sources */,
 				AA077A812B55BA7A00DEABE9 /* AppDelegate.swift in Sources */,
 				AA077A832B55BA7A00DEABE9 /* SceneDelegate.swift in Sources */,
 			);
