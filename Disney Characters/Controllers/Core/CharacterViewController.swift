@@ -12,22 +12,24 @@ import UIKit
 /// Controller to show and search for characters
 final class CharacterViewController: UIViewController {
 
+    private let characterListView = CharacterListView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         title = "Characters"
-        
-        let request = Request(
-            endpoint: .character,
-            queryParameters: [
-                URLQueryItem(name: "name", value: "Queen Arianna")
-            ]
-        )
-        print(request.url)
-        
-        Service.shared.execute(request,
-                               expecting: Character.self) { result in
-        }
+        setUpView()
+    }
+    
+    private func setUpView() {
+        view.addSubview(characterListView)
+        NSLayoutConstraint.activate([
+            
+            characterListView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            characterListView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor),
+            characterListView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
+            characterListView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+        ])
     }
 
 }

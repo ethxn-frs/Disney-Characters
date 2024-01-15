@@ -17,10 +17,7 @@ struct Character: Codable {
     let parkAttractions:[String]
     let allies:[String]
     let enemies:[String]
-    let sourceUrl:String
     let name:String
-    let imageUrl:String
-    let createdAt:String
-    let updatedAt:String
+    let imageUrl:String?
     let url:String
 }

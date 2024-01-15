@@ -22,6 +22,10 @@
 		AA18BA902B55CF3F0016683A /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA18BA8F2B55CF3F0016683A /* Service.swift */; };
 		AA18BA922B55CF4E0016683A /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA18BA912B55CF4E0016683A /* Request.swift */; };
 		AA18BA942B55CFD00016683A /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA18BA932B55CFD00016683A /* EndPoint.swift */; };
+		AA18BA992B55E0650016683A /* GetAllCharactersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA18BA982B55E0650016683A /* GetAllCharactersResponse.swift */; };
+		AA18BA9B2B55E3620016683A /* CharacterListViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA18BA9A2B55E3620016683A /* CharacterListViewViewModel.swift */; };
+		AA18BA9D2B55E3B70016683A /* CharacterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA18BA9C2B55E3B70016683A /* CharacterListView.swift */; };
+		AA18BA9F2B55E6EF0016683A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA18BA9E2B55E6EF0016683A /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,10 @@
 		AA18BA8F2B55CF3F0016683A /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		AA18BA912B55CF4E0016683A /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		AA18BA932B55CFD00016683A /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		AA18BA982B55E0650016683A /* GetAllCharactersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllCharactersResponse.swift; sourceTree = "<group>"; };
+		AA18BA9A2B55E3620016683A /* CharacterListViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewViewModel.swift; sourceTree = "<group>"; };
+		AA18BA9C2B55E3B70016683A /* CharacterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListView.swift; sourceTree = "<group>"; };
+		AA18BA9E2B55E6EF0016683A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +105,8 @@
 		AA077A952B55BBB700DEABE9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				AA077A9B2B55BF8500DEABE9 /* FilmAndSerie.swift */,
-				AA077A9D2B55BFBA00DEABE9 /* Character.swift */,
-				AA077A9F2B55BFCE00DEABE9 /* VideoGame.swift */,
+				AA18BA972B55E0550016683A /* APIResponseTypes */,
+				AA18BA962B55E0470016683A /* DataTypes */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -107,6 +114,7 @@
 		AA077A962B55BBBD00DEABE9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AA18BA9C2B55E3B70016683A /* CharacterListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -114,6 +122,7 @@
 		AA077A972B55BBC300DEABE9 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				AA18BA9A2B55E3620016683A /* CharacterListViewViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -142,6 +151,7 @@
 				AA077A8B2B55BA7B00DEABE9 /* LaunchScreen.storyboard */,
 				AA077A802B55BA7A00DEABE9 /* AppDelegate.swift */,
 				AA077A822B55BA7A00DEABE9 /* SceneDelegate.swift */,
+				AA18BA9E2B55E6EF0016683A /* Extensions.swift */,
 			);
 			path = Ressources;
 			sourceTree = "<group>";
@@ -156,6 +166,24 @@
 				AA18BA8D2B55CAA60016683A /* SettingViewController.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		AA18BA962B55E0470016683A /* DataTypes */ = {
+			isa = PBXGroup;
+			children = (
+				AA077A9B2B55BF8500DEABE9 /* FilmAndSerie.swift */,
+				AA077A9D2B55BFBA00DEABE9 /* Character.swift */,
+				AA077A9F2B55BFCE00DEABE9 /* VideoGame.swift */,
+			);
+			path = DataTypes;
+			sourceTree = "<group>";
+		};
+		AA18BA972B55E0550016683A /* APIResponseTypes */ = {
+			isa = PBXGroup;
+			children = (
+				AA18BA982B55E0650016683A /* GetAllCharactersResponse.swift */,
+			);
+			path = APIResponseTypes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,11 +262,15 @@
 				AA077A9C2B55BF8500DEABE9 /* FilmAndSerie.swift in Sources */,
 				AA077AA02B55BFCE00DEABE9 /* VideoGame.swift in Sources */,
 				AA18BA882B55CA650016683A /* CharacterViewController.swift in Sources */,
+				AA18BA9D2B55E3B70016683A /* CharacterListView.swift in Sources */,
 				AA077A852B55BA7A00DEABE9 /* TabBarController.swift in Sources */,
 				AA18BA8E2B55CAA60016683A /* SettingViewController.swift in Sources */,
+				AA18BA9B2B55E3620016683A /* CharacterListViewViewModel.swift in Sources */,
 				AA18BA8C2B55CA8E0016683A /* FilmAndSerieViewController.swift in Sources */,
+				AA18BA992B55E0650016683A /* GetAllCharactersResponse.swift in Sources */,
 				AA077A9E2B55BFBA00DEABE9 /* Character.swift in Sources */,
 				AA18BA902B55CF3F0016683A /* Service.swift in Sources */,
+				AA18BA9F2B55E6EF0016683A /* Extensions.swift in Sources */,
 				AA077A812B55BA7A00DEABE9 /* AppDelegate.swift in Sources */,
 				AA077A832B55BA7A00DEABE9 /* SceneDelegate.swift in Sources */,
 			);
