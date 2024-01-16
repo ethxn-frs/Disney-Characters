@@ -16,8 +16,7 @@ final class CharacterListViewViewModel: NSObject{
                                expecting: GetAllCharactersResponse.self) { result in
             switch result {
             case .success(let model):
-                print("Total: "+String(model.info.totalPages))
-                print("Page Result Count: "+String(model.data.count))
+                print("Exemple image url: "+String(model.data.first?.imageUrl ?? "no image"))
             case .failure(let error):
                 print(String(describing: error))
             }
@@ -33,8 +32,17 @@ extension CharacterListViewViewModel: UICollectionViewDataSource, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        cell.backgroundColor = .systemGreen
+        guard let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: CharacterCollectionViewCell.cellIdentifier,
+            for: indexPath
+        ) as? CharacterCollectionViewCell else {
+            fatalError("Unsupported cell")
+        }
+        let viewModel = CharacterCollectionViewCellViewModel(
+            characterName: "Etang",
+            characterImageURl: URL(string: "https://static.wikia.nocookie.net/disney/images/9/99/Mickey_Mouse_Disney_3.jpeg")
+        )
+        cell.configuret(with: viewModel)
         return cell
     }
     
