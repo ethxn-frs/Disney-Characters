@@ -56,7 +56,7 @@ final class Service {
             // Log the received data
             if let data = data {
                 let responseData = String(data: data, encoding: .utf8) ?? "N/A"
-                print("Received Data: \(responseData)")
+                //print("Received Data: \(responseData)")
             } else {
                 print("No data received")
             }

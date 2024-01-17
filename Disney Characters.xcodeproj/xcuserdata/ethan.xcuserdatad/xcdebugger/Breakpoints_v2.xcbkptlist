@@ -30,8 +30,8 @@
             filePath = "Disney Characters/Views/CharacterListView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "init(frame:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -295,8 +295,8 @@
             filePath = "Disney Characters/ViewModels/CharacterListViewViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -311,8 +311,8 @@
             filePath = "Disney Characters/ViewModels/CharacterListViewViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
             landmarkName = "characters"
             landmarkType = "24">
             <Locations>
@@ -375,8 +375,8 @@
             filePath = "Disney Characters/ViewModels/CharacterListViewViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -391,8 +391,8 @@
             filePath = "Disney Characters/Views/CharacterListView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "init(frame:)"
             landmarkType = "7">
             <Locations>
@@ -439,8 +439,8 @@
             filePath = "Disney Characters/ViewModels/CharacterListViewViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "fetchCharacters()"
             landmarkType = "7">
          </BreakpointContent>
@@ -455,8 +455,8 @@
             filePath = "Disney Characters/ViewModels/CharacterListViewViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "fetchCharacters()"
             landmarkType = "7">
          </BreakpointContent>

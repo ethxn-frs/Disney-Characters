@@ -38,6 +38,9 @@ final class CharacterListView: UIView {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.register(CharacterCollectionViewCell.self,
                                 forCellWithReuseIdentifier: CharacterCollectionViewCell.cellIdentifier)
+        collectionView.register(FooterLoadingCollectionReusableView.self,
+                                forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter,
+                                withReuseIdentifier: FooterLoadingCollectionReusableView.identifer)
         return collectionView
     }()
     // MARK - Init
@@ -89,6 +92,12 @@ extension CharacterListView: CharacterListViewViewModelDelegate {
         collectionView.reloadData() // Initial fetch
         UIView.animate(withDuration: 0.4) {
             self.collectionView.alpha = 1
+        }
+    }
+    
+    func didLoadMoreCharacters(with newIndexPath: [IndexPath]) {
+        collectionView.performBatchUpdates {
+            self.collectionView.insertItems(at: newIndexPath)
         }
     }
 }

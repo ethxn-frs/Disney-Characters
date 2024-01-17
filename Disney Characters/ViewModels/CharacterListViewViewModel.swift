@@ -9,6 +9,8 @@ import UIKit
 
 protocol CharacterListViewViewModelDelegate: AnyObject {
     func didLoadInitialCharacters()
+    func didLoadMoreCharacters(with newIndexPath: [IndexPath])
+    
     func didSelectCharacter(_ character: Character)
 }
 
@@ -16,6 +18,8 @@ protocol CharacterListViewViewModelDelegate: AnyObject {
 final class CharacterListViewViewModel: NSObject{
     
     public weak var delegate: CharacterListViewViewModelDelegate?
+    
+    private var isLoadingMoreCharacter = false
     
     private var characters: [Character] = [] {
         didSet{
@@ -39,7 +43,7 @@ final class CharacterListViewViewModel: NSObject{
             .listCharactersRequests,
             expecting: GetAllCharactersResponse.self
         ) { [weak self] result in
-            print("Service execution result: \(result)")
+            //print("Service execution result: \(result)")
             switch result {
             case .success(let responseModel):
                 let results = responseModel.data
@@ -56,8 +60,49 @@ final class CharacterListViewViewModel: NSObject{
     }
     
     /// Paginate if additional characters are needed
-    public func fetchAdditonalCharacters(){
-        // Fetch characters
+    public func fetchAdditonalCharacters(url: URL){
+        guard !isLoadingMoreCharacter else {
+            return
+        }
+        isLoadingMoreCharacter = true
+        print("Fetching more characters")
+        guard let request = Request(url: url) else {
+            isLoadingMoreCharacter = false
+            print("Failed to create request")
+            return
+        }
+        Service.shared.execute(request,
+                               expecting: GetAllCharactersResponse.self) { [weak self] result in
+            guard let strongSelf = self else {
+                return
+            }
+            switch result {
+            case .success(let responseModel):
+                let moreResults = responseModel.data
+                let info = responseModel.info
+                strongSelf.apiInfo = info
+                
+                
+                let originalCount = strongSelf.characters.count
+                let newCount = moreResults.count
+                let total = originalCount + newCount
+                let startingIndex = total - newCount - 1
+                let indexPathToAdd: [IndexPath] = Array(startingIndex..<(startingIndex+newCount)).compactMap({
+                    return IndexPath(row: $0, section: $0)
+                })
+                print(indexPathToAdd)
+                strongSelf.characters.append(contentsOf: moreResults)
+                DispatchQueue.main.async {
+                    strongSelf.delegate?.didLoadMoreCharacters(
+                        with: []
+                    )
+                    self?.isLoadingMoreCharacter = false
+                }
+            case .failure(let failure):
+                self?.isLoadingMoreCharacter = false
+                print(String(describing: failure))
+            }
+        }
     }
     
     public var shouldShowLoadMoreIndicator: Bool {
@@ -84,6 +129,26 @@ extension CharacterListViewViewModel: UICollectionViewDataSource, UICollectionVi
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        guard kind == UICollectionView.elementKindSectionFooter,
+              let footer = collectionView.dequeueReusableSupplementaryView(
+            ofKind: kind,
+            withReuseIdentifier: FooterLoadingCollectionReusableView.identifer ,
+            for: indexPath
+        ) as? FooterLoadingCollectionReusableView else {
+            fatalError("Unsupported")
+        }
+        footer.startAnimating()
+        return footer
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        guard shouldShowLoadMoreIndicator else {
+            return .zero
+        }
+        return CGSize(width: collectionView.frame.width, height: 100)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let bounds = UIScreen.main.bounds
@@ -105,9 +170,22 @@ extension CharacterListViewViewModel: UICollectionViewDataSource, UICollectionVi
 
 extension CharacterListViewViewModel: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        guard shouldShowLoadMoreIndicator else {
+        guard shouldShowLoadMoreIndicator,
+              !isLoadingMoreCharacter,
+              !cellViewModels.isEmpty,
+              let nextUrlString = apiInfo?.nextPage,
+              let url = URL(string: nextUrlString)  else {
             return
         }
-        
+        Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false) { [weak self] t in
+            let offset = scrollView.contentOffset.y
+            let totalContentHeight = scrollView.contentSize.height
+            let totalScrollViewFixedHeight = scrollView.frame.size.height
+            
+            if offset >= (totalContentHeight - totalScrollViewFixedHeight - 150) {
+                self?.fetchAdditonalCharacters(url: url)
+            }
+            t.invalidate()
+        }
     }
 }
