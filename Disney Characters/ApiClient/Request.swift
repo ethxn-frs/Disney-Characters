@@ -74,10 +74,11 @@ final class Request {
     }
     
     convenience init?(url: URL) {
-        let string = url.absoluteString
-        if !string.contains(Constants.baseUrl) {
-            return nil
+        var string = url.absoluteString
+        if (string.hasPrefix("http://")){
+            string = string.replacingOccurrences(of: "http://", with: "https://")
         }
+        print(string)
         let trimmed = string.replacingOccurrences(of: Constants.baseUrl+"/", with: "")
         if trimmed.contains("/"){
             let components = trimmed.components(separatedBy: "/")
