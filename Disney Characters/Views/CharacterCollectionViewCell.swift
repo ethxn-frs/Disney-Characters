@@ -13,7 +13,8 @@ final class CharacterCollectionViewCell: UICollectionViewCell {
     
     private let imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFit
+        //imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -35,20 +36,29 @@ final class CharacterCollectionViewCell: UICollectionViewCell {
         super.init(frame: frame)
         contentView.backgroundColor = .secondarySystemBackground
         contentView.addSubviews(imageView, nameLabel)
-        
         addConstraints()
+        setUpLayer()
     }
     
     required init?(coder: NSCoder) {
         fatalError("Unsupported")
     }
     
+    private func setUpLayer() {
+        contentView.layer.cornerRadius = 10
+        contentView.layer.shadowColor = UIColor.label.cgColor
+        contentView.layer.cornerRadius = 4
+        contentView.layer.shadowOffset = CGSize(width: -4, height: 4)
+        contentView.layer.shadowOpacity = 0.3
+    }
+    
+    
     private func addConstraints() {
         NSLayoutConstraint.activate([
-            nameLabel.heightAnchor.constraint(equalToConstant: 40),
+            nameLabel.heightAnchor.constraint(equalToConstant: 50),
             
-            nameLabel.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 5),
-            nameLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -5),
+            nameLabel.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 10),
+            nameLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -10),
             
             nameLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -3),
             
@@ -59,13 +69,18 @@ final class CharacterCollectionViewCell: UICollectionViewCell {
         ])
     }
     
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        setUpLayer()
+    }
+    
     override func prepareForReuse() {
         super.prepareForReuse()
         imageView.image = nil
         nameLabel.text = nil
     }
     
-    public func configuret(with viewModel: CharacterCollectionViewCellViewModel) {
+    public func configure(with viewModel: CharacterCollectionViewCellViewModel) {
         nameLabel.text = viewModel.characterName
         viewModel.fetchImage{ [weak self] result in
             switch result {

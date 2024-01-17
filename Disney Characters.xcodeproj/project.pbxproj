@@ -15,6 +15,9 @@
 		AA077A9C2B55BF8500DEABE9 /* FilmAndSerie.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA077A9B2B55BF8500DEABE9 /* FilmAndSerie.swift */; };
 		AA077A9E2B55BFBA00DEABE9 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA077A9D2B55BFBA00DEABE9 /* Character.swift */; };
 		AA077AA02B55BFCE00DEABE9 /* VideoGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA077A9F2B55BFCE00DEABE9 /* VideoGame.swift */; };
+		AA0A6D312B58763400AFB9FB /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0A6D302B58763400AFB9FB /* CharacterDetailViewController.swift */; };
+		AA0A6D332B5876B200AFB9FB /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0A6D322B5876B200AFB9FB /* CharacterDetailView.swift */; };
+		AA0A6D352B5876CB00AFB9FB /* CharacterDetailViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0A6D342B5876CB00AFB9FB /* CharacterDetailViewViewModel.swift */; };
 		AA18BA882B55CA650016683A /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA18BA872B55CA650016683A /* CharacterViewController.swift */; };
 		AA18BA8A2B55CA810016683A /* VideoGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA18BA892B55CA810016683A /* VideoGameViewController.swift */; };
 		AA18BA8C2B55CA8E0016683A /* FilmAndSerieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA18BA8B2B55CA8E0016683A /* FilmAndSerieViewController.swift */; };
@@ -41,6 +44,9 @@
 		AA077A9B2B55BF8500DEABE9 /* FilmAndSerie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmAndSerie.swift; sourceTree = "<group>"; };
 		AA077A9D2B55BFBA00DEABE9 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		AA077A9F2B55BFCE00DEABE9 /* VideoGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoGame.swift; sourceTree = "<group>"; };
+		AA0A6D302B58763400AFB9FB /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
+		AA0A6D322B5876B200AFB9FB /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
+		AA0A6D342B5876CB00AFB9FB /* CharacterDetailViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewViewModel.swift; sourceTree = "<group>"; };
 		AA18BA872B55CA650016683A /* CharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewController.swift; sourceTree = "<group>"; };
 		AA18BA892B55CA810016683A /* VideoGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoGameViewController.swift; sourceTree = "<group>"; };
 		AA18BA8B2B55CA8E0016683A /* FilmAndSerieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmAndSerieViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +107,7 @@
 		AA077A942B55BBAA00DEABE9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AA0A6D2F2B58761A00AFB9FB /* Other */,
 				AA18BA862B55CA430016683A /* Core */,
 			);
 			path = Controllers;
@@ -120,6 +127,7 @@
 			children = (
 				AA18BA9C2B55E3B70016683A /* CharacterListView.swift */,
 				AA18BAA02B5712340016683A /* CharacterCollectionViewCell.swift */,
+				AA0A6D322B5876B200AFB9FB /* CharacterDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -129,6 +137,7 @@
 			children = (
 				AA18BA9A2B55E3620016683A /* CharacterListViewViewModel.swift */,
 				AA18BAA22B5713CD0016683A /* CharacterCollectionViewCellViewModel.swift */,
+				AA0A6D342B5876CB00AFB9FB /* CharacterDetailViewViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -160,6 +169,14 @@
 				AA18BA9E2B55E6EF0016683A /* Extensions.swift */,
 			);
 			path = Ressources;
+			sourceTree = "<group>";
+		};
+		AA0A6D2F2B58761A00AFB9FB /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				AA0A6D302B58763400AFB9FB /* CharacterDetailViewController.swift */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 		AA18BA862B55CA430016683A /* Core */ = {
@@ -265,8 +282,11 @@
 				AA18BA942B55CFD00016683A /* EndPoint.swift in Sources */,
 				AA18BA8A2B55CA810016683A /* VideoGameViewController.swift in Sources */,
 				AA18BA922B55CF4E0016683A /* Request.swift in Sources */,
+				AA0A6D332B5876B200AFB9FB /* CharacterDetailView.swift in Sources */,
 				AA077A9C2B55BF8500DEABE9 /* FilmAndSerie.swift in Sources */,
 				AA077AA02B55BFCE00DEABE9 /* VideoGame.swift in Sources */,
+				AA0A6D352B5876CB00AFB9FB /* CharacterDetailViewViewModel.swift in Sources */,
+				AA0A6D312B58763400AFB9FB /* CharacterDetailViewController.swift in Sources */,
 				AA18BA882B55CA650016683A /* CharacterViewController.swift in Sources */,
 				AA18BA9D2B55E3B70016683A /* CharacterListView.swift in Sources */,
 				AA077A852B55BA7A00DEABE9 /* TabBarController.swift in Sources */,

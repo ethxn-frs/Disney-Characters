@@ -7,28 +7,70 @@
 
 import UIKit
 
+protocol CharacterListViewViewModelDelegate: AnyObject {
+    func didLoadInitialCharacters()
+    func didSelectCharacter(_ character: Character)
+}
+
+// View model to handle character list view
 final class CharacterListViewViewModel: NSObject{
     
+    public weak var delegate: CharacterListViewViewModelDelegate?
     
+    private var characters: [Character] = [] {
+        didSet{
+            for character in characters {
+                let viewModel = CharacterCollectionViewCellViewModel(
+                    characterName: character.name,
+                    characterImageURl: URL(string: character.imageUrl ?? "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Replacement_character.svg/800px-Replacement_character.svg.png")
+                )
+                cellViewModels.append(viewModel)
+            }
+        }
+    }
     
-    func fetchCharacters() {
-        Service.shared.execute(.listCharactersRequests,
-                               expecting: GetAllCharactersResponse.self) { result in
+    private var cellViewModels: [CharacterCollectionViewCellViewModel] = []
+    
+    private var apiInfo: GetAllCharactersResponse.Info? = nil
+    
+    /// Fetch initial set of characters (50)
+    public func fetchCharacters() {
+        Service.shared.execute(
+            .listCharactersRequests,
+            expecting: GetAllCharactersResponse.self
+        ) { [weak self] result in
+            print("Service execution result: \(result)")
             switch result {
-            case .success(let model):
-                print("Exemple image url: "+String(model.data.first?.imageUrl ?? "no image"))
+            case .success(let responseModel):
+                let results = responseModel.data
+                let info = responseModel.info
+                self?.characters = results
+                self?.apiInfo = info
+                DispatchQueue.main.async {
+                    self?.delegate?.didLoadInitialCharacters()
+                }
             case .failure(let error):
                 print(String(describing: error))
             }
         }
     }
+    
+    /// Paginate if additional characters are needed
+    public func fetchAdditonalCharacters(){
+        // Fetch characters
+    }
+    
+    public var shouldShowLoadMoreIndicator: Bool {
+        return apiInfo?.nextPage != nil
+    }
 }
 
+// MARK - CollectionView
 extension CharacterListViewViewModel: UICollectionViewDataSource, UICollectionViewDelegate,
     UICollectionViewDelegateFlowLayout
 {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return cellViewModels.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -38,11 +80,7 @@ extension CharacterListViewViewModel: UICollectionViewDataSource, UICollectionVi
         ) as? CharacterCollectionViewCell else {
             fatalError("Unsupported cell")
         }
-        let viewModel = CharacterCollectionViewCellViewModel(
-            characterName: "Etang",
-            characterImageURl: URL(string: "https://static.wikia.nocookie.net/disney/images/9/99/Mickey_Mouse_Disney_3.jpeg")
-        )
-        cell.configuret(with: viewModel)
+        cell.configure(with: cellViewModels[indexPath.row])
         return cell
     }
     
@@ -54,5 +92,22 @@ extension CharacterListViewViewModel: UICollectionViewDataSource, UICollectionVi
             width: width,
             height: width * 1.5
         )
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
+        collectionView.deselectItem(at: indexPath, animated: true)
+        let character = characters[indexPath.row]
+        delegate?.didSelectCharacter(character)
+    }
+}
+
+// MARK - ScrollView
+
+extension CharacterListViewViewModel: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        guard shouldShowLoadMoreIndicator else {
+            return
+        }
+        
     }
 }

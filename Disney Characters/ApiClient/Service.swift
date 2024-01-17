@@ -33,27 +33,47 @@ final class Service {
         completion: @escaping (Result<T, Error>) -> Void
     ){
         guard let urlRequest = self.request(from: request) else {
+            print("failed to create request")
             completion(.failure(ServiceError.failedToCreateRequest))
             return
         }
-        
-        let task = URLSession.shared.dataTask(with: urlRequest){
-            data, _, error in
-            guard let data = data, error == nil else {
+        let task = URLSession.shared.dataTask(with: urlRequest) { data, response, error in
+            // Log the URL
+            print("URL: \(urlRequest.url?.absoluteString ?? "N/A")")
+
+            // Log the response status code
+            if let httpResponse = response as? HTTPURLResponse {
+                print("HTTP Status Code: \(httpResponse.statusCode)")
+            }
+
+            // Log any error that occurred
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
                 completion(.failure(ServiceError.failedToGetData))
                 return
             }
-            
-            // Decode reponse to object
-            do {
-                let result = try JSONDecoder().decode(type.self, from: data)
-                completion(.success(result))
+
+            // Log the received data
+            if let data = data {
+                let responseData = String(data: data, encoding: .utf8) ?? "N/A"
+                print("Received Data: \(responseData)")
+            } else {
+                print("No data received")
             }
-            catch {
+
+            // Decode response to object
+            do {
+                let result = try JSONDecoder().decode(type.self, from: data ?? Data())
+                print("Decoding successful")
+                completion(.success(result))
+            } catch {
+                print("Decoding error: \(error.localizedDescription)")
                 completion(.failure(error))
             }
         }
+
         task.resume()
+
     }
     
     // MARK - Private
@@ -62,6 +82,7 @@ final class Service {
             return nil
         }
         var request = URLRequest(url: url )
+        
         request.httpMethod = Request.httpMethod
         return request
     }
