@@ -19,6 +19,7 @@
 		AA0A6D332B5876B200AFB9FB /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0A6D322B5876B200AFB9FB /* CharacterDetailView.swift */; };
 		AA0A6D352B5876CB00AFB9FB /* CharacterDetailViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0A6D342B5876CB00AFB9FB /* CharacterDetailViewViewModel.swift */; };
 		AA0A6D372B587E9D00AFB9FB /* FooterLoadingCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0A6D362B587E9D00AFB9FB /* FooterLoadingCollectionReusableView.swift */; };
+		AA0A6D392B59D50200AFB9FB /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0A6D382B59D50200AFB9FB /* ImageLoader.swift */; };
 		AA18BA882B55CA650016683A /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA18BA872B55CA650016683A /* CharacterViewController.swift */; };
 		AA18BA8A2B55CA810016683A /* VideoGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA18BA892B55CA810016683A /* VideoGameViewController.swift */; };
 		AA18BA8C2B55CA8E0016683A /* FilmAndSerieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA18BA8B2B55CA8E0016683A /* FilmAndSerieViewController.swift */; };
@@ -49,6 +50,7 @@
 		AA0A6D322B5876B200AFB9FB /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
 		AA0A6D342B5876CB00AFB9FB /* CharacterDetailViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewViewModel.swift; sourceTree = "<group>"; };
 		AA0A6D362B587E9D00AFB9FB /* FooterLoadingCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterLoadingCollectionReusableView.swift; sourceTree = "<group>"; };
+		AA0A6D382B59D50200AFB9FB /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		AA18BA872B55CA650016683A /* CharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewController.swift; sourceTree = "<group>"; };
 		AA18BA892B55CA810016683A /* VideoGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoGameViewController.swift; sourceTree = "<group>"; };
 		AA18BA8B2B55CA8E0016683A /* FilmAndSerieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmAndSerieViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 		AA077A992B55BBDD00DEABE9 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				AA0A6D382B59D50200AFB9FB /* ImageLoader.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				AA077A852B55BA7A00DEABE9 /* TabBarController.swift in Sources */,
 				AA18BA8E2B55CAA60016683A /* SettingViewController.swift in Sources */,
 				AA18BA9B2B55E3620016683A /* CharacterListViewViewModel.swift in Sources */,
+				AA0A6D392B59D50200AFB9FB /* ImageLoader.swift in Sources */,
 				AA18BA8C2B55CA8E0016683A /* FilmAndSerieViewController.swift in Sources */,
 				AA18BA992B55E0650016683A /* GetAllCharactersResponse.swift in Sources */,
 				AA18BAA12B5712340016683A /* CharacterCollectionViewCell.swift in Sources */,

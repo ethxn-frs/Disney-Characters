@@ -304,56 +304,8 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8C66D32D-C8F1-428C-812A-201CE70FADFE"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Disney Characters/ViewModels/CharacterListViewViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "characters"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "8C66D32D-C8F1-428C-812A-201CE70FADFE - f8653024446e8580"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Disney_Characters.CharacterListViewViewModel.characters.setter : Swift.Array&lt;Disney_Characters.Character&gt;"
-                  moduleName = "Disney Characters"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ethan/Documents/dev/Disney%20Characters/Disney%20Characters/ViewModels/CharacterListViewViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "12"
-                  endingLineNumber = "12"
-                  offsetFromSymbolStart = "0">
-               </Location>
-               <Location
-                  uuid = "8C66D32D-C8F1-428C-812A-201CE70FADFE - 91c9c652ac2852ec"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Disney_Characters.CharacterListViewViewModel.init() -&gt; Disney_Characters.CharacterListViewViewModel"
-                  moduleName = "Disney Characters"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ethan/Documents/dev/Disney%20Characters/Disney%20Characters/ViewModels/CharacterListViewViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "12"
-                  endingLineNumber = "12"
-                  offsetFromSymbolStart = "56">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "5B6F87F0-D3DC-4838-875A-3B3439200B2F"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Disney Characters/Models/DataTypes/Character.swift"
@@ -439,8 +391,8 @@
             filePath = "Disney Characters/ViewModels/CharacterListViewViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "fetchCharacters()"
             landmarkType = "7">
          </BreakpointContent>
@@ -455,8 +407,8 @@
             filePath = "Disney Characters/ViewModels/CharacterListViewViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "fetchCharacters()"
             landmarkType = "7">
          </BreakpointContent>
@@ -496,22 +448,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1F94EDF9-FDBB-499D-953E-EB3F8569755E"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Disney Characters/ViewModels/CharacterListViewViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
-            landmarkName = "fetchAdditonalCharacters(url:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "ADCD329A-27F3-4B4C-A022-80FF655E7C0E"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -519,8 +455,8 @@
             filePath = "Disney Characters/ViewModels/CharacterListViewViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "fetchAdditonalCharacters(url:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -609,7 +545,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "26CB190D-847B-47C1-B48C-46909810EB23"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Disney Characters/Models/APIResponseTypes/GetAllCharactersResponse.swift"
@@ -624,20 +560,20 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "59B6991F-6A05-46B7-B423-23EEFFD16A8E"
+            uuid = "D0030466-93D7-4D85-BBDD-E49BE1A850FD"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Disney Characters/ApiClient/Request.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "init?(url:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "59B6991F-6A05-46B7-B423-23EEFFD16A8E - 2e9171963c253201"
+                  uuid = "D0030466-93D7-4D85-BBDD-E49BE1A850FD - 2e9171963c2530d7"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -647,12 +583,12 @@
                   urlString = "file:///Users/ethan/Documents/dev/Disney%20Characters/Disney%20Characters/ApiClient/Request.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "79"
-                  endingLineNumber = "79"
-                  offsetFromSymbolStart = "364">
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "1860">
                </Location>
                <Location
-                  uuid = "59B6991F-6A05-46B7-B423-23EEFFD16A8E - 2e9171963c253201"
+                  uuid = "D0030466-93D7-4D85-BBDD-E49BE1A850FD - 2e9171963c25316b"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -662,39 +598,9 @@
                   urlString = "file:///Users/ethan/Documents/dev/Disney%20Characters/Disney%20Characters/ApiClient/Request.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "79"
-                  endingLineNumber = "79"
-                  offsetFromSymbolStart = "248">
-               </Location>
-               <Location
-                  uuid = "59B6991F-6A05-46B7-B423-23EEFFD16A8E - 2e9171963c253262"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Disney_Characters.Request.__allocating_init(url: Foundation.URL) -&gt; Swift.Optional&lt;Disney_Characters.Request&gt;"
-                  moduleName = "Disney Characters"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ethan/Documents/dev/Disney%20Characters/Disney%20Characters/ApiClient/Request.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "82"
-                  endingLineNumber = "82"
-                  offsetFromSymbolStart = "748">
-               </Location>
-               <Location
-                  uuid = "59B6991F-6A05-46B7-B423-23EEFFD16A8E - 2e9171963c253262"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Disney_Characters.Request.__allocating_init(url: Foundation.URL) -&gt; Swift.Optional&lt;Disney_Characters.Request&gt;"
-                  moduleName = "Disney Characters"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ethan/Documents/dev/Disney%20Characters/Disney%20Characters/ApiClient/Request.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "82"
-                  endingLineNumber = "82"
-                  offsetFromSymbolStart = "856">
+                  startingLineNumber = "105"
+                  endingLineNumber = "105"
+                  offsetFromSymbolStart = "168">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -702,49 +608,209 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B36B3217-C400-48AF-9A48-779E453D99CE"
+            uuid = "66BF1FE3-C5F2-4D93-951D-AC391ABEEE23"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Disney Characters/ApiClient/Request.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
             landmarkName = "init?(url:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D0647DE3-D00F-45D5-AF29-A2B87D9300CF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Disney Characters/Views/CharacterListView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "didLoadMoreCharacters(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B62F25B7-5E4A-44A3-8DC0-A968C86EEB5C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Disney Characters/Views/CharacterListView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "didSelectCharacter(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "742A263F-43A7-4131-831B-1A4A5158A33C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Disney Characters/Views/CharacterListView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "didLoadMoreCharacters(with:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "B36B3217-C400-48AF-9A48-779E453D99CE - 2e9171963c2532c7"
+                  uuid = "742A263F-43A7-4131-831B-1A4A5158A33C - f946d02aafeb7c97"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Disney_Characters.Request.__allocating_init(url: Foundation.URL) -&gt; Swift.Optional&lt;Disney_Characters.Request&gt;"
+                  symbolName = "Disney_Characters.CharacterListView.didLoadMoreCharacters(with: Swift.Array&lt;Foundation.IndexPath&gt;) -&gt; ()"
                   moduleName = "Disney Characters"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ethan/Documents/dev/Disney%20Characters/Disney%20Characters/ApiClient/Request.swift"
+                  urlString = "file:///Users/ethan/Documents/dev/Disney%20Characters/Disney%20Characters/Views/CharacterListView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "77"
-                  endingLineNumber = "77"
-                  offsetFromSymbolStart = "172">
+                  startingLineNumber = "99"
+                  endingLineNumber = "99"
+                  offsetFromSymbolStart = "40">
                </Location>
                <Location
-                  uuid = "B36B3217-C400-48AF-9A48-779E453D99CE - 2e9171963c2532c7"
+                  uuid = "742A263F-43A7-4131-831B-1A4A5158A33C - cdc90390391d4766"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Disney_Characters.Request.__allocating_init(url: Foundation.URL) -&gt; Swift.Optional&lt;Disney_Characters.Request&gt;"
+                  symbolName = "closure #1 () -&gt; () in Disney_Characters.CharacterListView.didLoadMoreCharacters(with: Swift.Array&lt;Foundation.IndexPath&gt;) -&gt; ()"
                   moduleName = "Disney Characters"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ethan/Documents/dev/Disney%20Characters/Disney%20Characters/ApiClient/Request.swift"
+                  urlString = "file:///Users/ethan/Documents/dev/Disney%20Characters/Disney%20Characters/Views/CharacterListView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "77"
-                  endingLineNumber = "77"
-                  offsetFromSymbolStart = "184">
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "40">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AD40DEDD-619D-4FC4-9181-C0B0591B688C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Disney Characters/ViewModels/CharacterListViewViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "CharacterListViewViewModel"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ECA51F50-08A9-4962-B0A3-E1B5B2D26F14"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Disney Characters/ViewModels/CharacterListViewViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "CharacterListViewViewModel"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E9A67A99-7D6C-47E1-B6E8-BE1C0455F7BB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Disney Characters/ViewModels/CharacterListViewViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "CharacterListViewViewModel"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "E9A67A99-7D6C-47E1-B6E8-BE1C0455F7BB - 91c9c652ac285184"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Disney_Characters.CharacterListViewViewModel.init() -&gt; Disney_Characters.CharacterListViewViewModel"
+                  moduleName = "Disney Characters"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ethan/Documents/dev/Disney%20Characters/Disney%20Characters/ViewModels/CharacterListViewViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "204">
+               </Location>
+               <Location
+                  uuid = "E9A67A99-7D6C-47E1-B6E8-BE1C0455F7BB - 99932f53f6090380"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Disney_Characters.CharacterListViewViewModel.characters.didset : Swift.Array&lt;Disney_Characters.Character&gt;"
+                  moduleName = "Disney Characters"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ethan/Documents/dev/Disney%20Characters/Disney%20Characters/ViewModels/CharacterListViewViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "1308">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7A9D8C06-ACD2-452E-9F51-BB3E972CD104"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Disney Characters/ViewModels/CharacterListViewViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "CharacterListViewViewModel"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0EA8CD1D-D45E-4337-A719-B52F136FB9DE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Disney Characters/ViewModels/CharacterListViewViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "fetchAdditonalCharacters(url:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

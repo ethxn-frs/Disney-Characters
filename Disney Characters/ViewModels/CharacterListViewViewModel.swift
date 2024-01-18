@@ -23,12 +23,14 @@ final class CharacterListViewViewModel: NSObject{
     
     private var characters: [Character] = [] {
         didSet{
-            for character in characters {
+            for character in characters{
                 let viewModel = CharacterCollectionViewCellViewModel(
                     characterName: character.name,
                     characterImageURl: URL(string: character.imageUrl ?? "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Replacement_character.svg/800px-Replacement_character.svg.png")
                 )
-                cellViewModels.append(viewModel)
+                if !cellViewModels.contains(viewModel) {
+                    cellViewModels.append(viewModel)
+                }
             }
         }
     }
@@ -64,8 +66,8 @@ final class CharacterListViewViewModel: NSObject{
         guard !isLoadingMoreCharacter else {
             return
         }
-        isLoadingMoreCharacter = true
         print("Fetching more characters")
+        isLoadingMoreCharacter = true
         guard let request = Request(url: url) else {
             isLoadingMoreCharacter = false
             print("Failed to create request")
@@ -82,19 +84,17 @@ final class CharacterListViewViewModel: NSObject{
                 let info = responseModel.info
                 strongSelf.apiInfo = info
                 
-                
                 let originalCount = strongSelf.characters.count
                 let newCount = moreResults.count
                 let total = originalCount + newCount
-                let startingIndex = total - newCount - 1
+                let startingIndex = total - newCount
                 let indexPathToAdd: [IndexPath] = Array(startingIndex..<(startingIndex+newCount)).compactMap({
-                    return IndexPath(row: $0, section: $0)
+                    return IndexPath(row: $0, section: 0)
                 })
-                print(indexPathToAdd)
                 strongSelf.characters.append(contentsOf: moreResults)
                 DispatchQueue.main.async {
                     strongSelf.delegate?.didLoadMoreCharacters(
-                        with: []
+                        with: indexPathToAdd
                     )
                     self?.isLoadingMoreCharacter = false
                 }
@@ -182,7 +182,7 @@ extension CharacterListViewViewModel: UIScrollViewDelegate {
             let totalContentHeight = scrollView.contentSize.height
             let totalScrollViewFixedHeight = scrollView.frame.size.height
             
-            if offset >= (totalContentHeight - totalScrollViewFixedHeight - 150) {
+            if offset >= (totalContentHeight - totalScrollViewFixedHeight - 100) {
                 self?.fetchAdditonalCharacters(url: url)
             }
             t.invalidate()

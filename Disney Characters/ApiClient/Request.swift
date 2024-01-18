@@ -18,7 +18,7 @@ final class Request {
     
     /// Desired endpoint
     private let endpoint: EndPoint
-
+    
     /// Path components for API, if any
     private let pathComponents: [String]
     
@@ -56,7 +56,7 @@ final class Request {
     
     /// Desired http method
     public let httpMethod = "GET"
-     
+    
     //Mark - Public
     
     
@@ -66,35 +66,66 @@ final class Request {
     ///   - pathComponents: Collection of path components
     ///   - queryParameters: Collection of queries parameters
     public init(endpoint: EndPoint,
-         pathComponents: [String] = [],
-         queryParameters: [URLQueryItem] = []) {
+                pathComponents: [String] = [],
+                queryParameters: [URLQueryItem] = []) {
         self.endpoint = endpoint
         self.pathComponents = pathComponents
         self.queryParameters = queryParameters
     }
     
     convenience init?(url: URL) {
+        /* var string = url.absoluteString
+         if (string.hasPrefix("http://")){
+         string = string.replacingOccurrences(of: "http://", with: "https://")
+         }
+         print(string)
+         let trimmed = string.replacingOccurrences(of: Constants.baseUrl+"/", with: "")
+         if trimmed.contains("/"){
+         let components = trimmed.components(separatedBy: "/")
+         if !components.isEmpty {
+         let endpointString = components[0]
+         if let Endpoint = EndPoint(rawValue: endpointString) {
+         self.init(endpoint: Endpoint)
+         return
+         }
+         }
+         } else if trimmed.contains("?") {
+         let temp = trimmed.split(separator: "?")
+         let components = temp[1].components(separatedBy: "&")
+         if !components.isEmpty {
+         let endpointString = components[0]
+         if let Endpoint = EndPoint(rawValue: endpointString) {
+         self.init(endpoint: Endpoint)
+         return
+         }
+         }
+         }
+         return nil
+         }*/
         var string = url.absoluteString
-        if (string.hasPrefix("http://")){
+        if (string.hasPrefix("http://")) {
             string = string.replacingOccurrences(of: "http://", with: "https://")
         }
         print(string)
         let trimmed = string.replacingOccurrences(of: Constants.baseUrl+"/", with: "")
-        if trimmed.contains("/"){
-            let components = trimmed.components(separatedBy: "/")
-            if !components.isEmpty {
-                let endpointString = components[0]
-                if let Endpoint = EndPoint(rawValue: endpointString) {
-                    self.init(endpoint: Endpoint)
-                    return
-                }
-            }
-        } else if trimmed.contains("?") {
+        if trimmed.contains("?") {
             let components = trimmed.components(separatedBy: "?")
-            if !components.isEmpty {
+            if !components.isEmpty, components.count >= 2 {
                 let endpointString = components[0]
+                let queryItemsString = components[1]
+                
+                let queryItems: [URLQueryItem] = queryItemsString.components(separatedBy: "&").compactMap({
+                    guard $0.contains("=") else {
+                        return nil
+                    }
+                    let parts = $0.components(separatedBy: "=")
+                    
+                    return URLQueryItem(
+                        name: parts[0],
+                        value: parts[1])
+                })
                 if let Endpoint = EndPoint(rawValue: endpointString) {
-                    self.init(endpoint: Endpoint)
+                    self.init(endpoint: Endpoint, queryParameters: queryItems)
                     return
                 }
             }
