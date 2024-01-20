@@ -43,7 +43,7 @@ class CharacterFilmCollectionViewCell: UICollectionViewCell {
         return view
     }()
     
-    // MARK - Ini
+    // MARK - Init
     
     override init(frame: CGRect) {
         super.init(frame: frame)
