@@ -72,7 +72,7 @@ class CharacterVideoGameCollectionViewCell: UICollectionViewCell {
             
             iconImageView.heightAnchor.constraint(equalToConstant: 50),
             iconImageView.widthAnchor.constraint(equalToConstant: 30),
-            iconImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 35),
+            iconImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 30),
             iconImageView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 15),
 
             valueLabel.leftAnchor.constraint(equalTo: iconImageView.rightAnchor, constant: 10),
