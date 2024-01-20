@@ -5,6 +5,7 @@
 //  Created by Etang on 20/01/2024.
 //
 
+import UIKit
 import Foundation
 
 final class CharacterFilmCollectionViewCellViewModel {
@@ -13,6 +14,7 @@ final class CharacterFilmCollectionViewCellViewModel {
     
     init(
         value: String
+        
     ) {
         self.value = value
     }
