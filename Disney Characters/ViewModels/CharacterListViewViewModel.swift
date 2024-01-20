@@ -20,13 +20,14 @@ final class CharacterListViewViewModel: NSObject{
     public weak var delegate: CharacterListViewViewModelDelegate?
     
     private var isLoadingMoreCharacter = false
+    private let characterUnknownImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Replacement_character.svg/800px-Replacement_character.svg.png"
     
     private var characters: [Character] = [] {
         didSet{
             for character in characters{
                 let viewModel = CharacterCollectionViewCellViewModel(
                     characterName: character.name,
-                    characterImageURl: URL(string: character.imageUrl ?? "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Replacement_character.svg/800px-Replacement_character.svg.png")
+                    characterImageURl: URL(string: character.imageUrl ?? characterUnknownImageUrl)
                 )
                 if !cellViewModels.contains(viewModel) {
                     cellViewModels.append(viewModel)

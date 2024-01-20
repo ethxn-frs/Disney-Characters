@@ -74,34 +74,6 @@ final class Request {
     }
     
     convenience init?(url: URL) {
-        /* var string = url.absoluteString
-         if (string.hasPrefix("http://")){
-         string = string.replacingOccurrences(of: "http://", with: "https://")
-         }
-         print(string)
-         let trimmed = string.replacingOccurrences(of: Constants.baseUrl+"/", with: "")
-         if trimmed.contains("/"){
-         let components = trimmed.components(separatedBy: "/")
-         if !components.isEmpty {
-         let endpointString = components[0]
-         if let Endpoint = EndPoint(rawValue: endpointString) {
-         self.init(endpoint: Endpoint)
-         return
-         }
-         }
-         } else if trimmed.contains("?") {
-         let temp = trimmed.split(separator: "?")
-         let components = temp[1].components(separatedBy: "&")
-         if !components.isEmpty {
-         let endpointString = components[0]
-         if let Endpoint = EndPoint(rawValue: endpointString) {
-         self.init(endpoint: Endpoint)
-         return
-         }
-         }
-         }
-         return nil
-         }*/
         var string = url.absoluteString
         if (string.hasPrefix("http://")) {
             string = string.replacingOccurrences(of: "http://", with: "https://")
@@ -126,6 +98,25 @@ final class Request {
                 })
                 if let Endpoint = EndPoint(rawValue: endpointString) {
                     self.init(endpoint: Endpoint, queryParameters: queryItems)
+                    return
+                }
+            }
+        } else if trimmed.contains("/") {
+            var components = trimmed.components(separatedBy: "/")
+            if !components.isEmpty {
+                if (components[0].contains("s")){
+                    components[0] = components[0].replacingOccurrences(of: "s", with: "")
+                }
+                let endPointString = components[0] // Endpoint
+                var pathComponents: [String] = []
+                if components.count > 1 {
+                    pathComponents = components
+                    pathComponents.removeFirst()
+                }
+                if let endpoint = EndPoint(
+                    rawValue: endPointString
+                ) {
+                    self.init(endpoint: endpoint, pathComponents: pathComponents)
                     return
                 }
             }
