@@ -11,11 +11,14 @@ import Foundation
 final class CharacterFilmCollectionViewCellViewModel {
     
     public let value: String
+    public let title: String
+    public let iconImageView: UIImage
     
     init(
         value: String
-        
     ) {
         self.value = value
+        self.title = "Film"
+        self.iconImageView = UIImage(systemName: "movieclapper")!
     }
 }

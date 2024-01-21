@@ -9,7 +9,7 @@ import Foundation
 
 
 /// Represents unique api endpoint
-@frozen enum EndPoint: String {
+@frozen enum EndPoint: String, CaseIterable, Hashable{
     case character
     case filmAndSerie
     case episode
