@@ -17,6 +17,26 @@ enum SettingsOption: CaseIterable {
     case viewCode
     case supportUs
     
+    var targetUrl: URL? {
+        switch self {
+        case .rateApp:
+            return nil
+        case .contactUs:
+            return URL(string: "https://www.instagram.com/ethxn.frs/")
+        case .terms:
+            return URL(string: "https://www.instagram.com/ethxn.frs/")
+        case .privacy:
+            return URL(string: "https://www.instagram.com/ethxn.frs/")
+        case .apiReference:
+            return URL(string: "https://disneyapi.dev/")
+        case .viewCode:
+            return URL(string: "https://github.com/ethxn-frs/Disney-Characters")
+        case .supportUs:
+            // Paywall with revenue cat to create
+            return URL(string: "https://www.paypal.me/therichestoftheworld")
+        }
+    }
+    
     var displayTitle: String {
         switch self {
         case .rateApp:

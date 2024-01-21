@@ -555,6 +555,8 @@
 				DEVELOPMENT_TEAM = Z8BA2MK3L3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Disney Characters/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Disney Characters";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -582,6 +584,8 @@
 				DEVELOPMENT_TEAM = Z8BA2MK3L3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Disney Characters/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Disney Characters";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

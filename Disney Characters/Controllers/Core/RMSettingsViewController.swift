@@ -1,8 +1,8 @@
 //
-//  SettingViewController.swift
-//  Disney Characters
+//  RMSettingsViewController.swift
+//  RickAndMorty
 //
-//  Created by Etang on 15/01/2024.
+//  Created by Afraz Siddiqui on 12/22/22.
 //
 
 import StoreKit
@@ -10,10 +10,9 @@ import SafariServices
 import SwiftUI
 import UIKit
 
+/// Controller to show various app options and settings
+final class RMSettingsViewController: UIViewController {
 
-/// Controller to show app options and settings
-final class SettingViewController: UIViewController {
-    
     private var settingsSwiftUIController: UIHostingController<SettingsView>?
 
     override func viewDidLoad() {
@@ -55,17 +54,5 @@ final class SettingViewController: UIViewController {
         guard Thread.current.isMainThread else {
             return
         }
-        
-        if let url = option.targetUrl {
-            // Open website
-            let vc = SFSafariViewController(url: url)
-            present(vc, animated: true)
-        } else if option == .rateApp {
-            // Show rating propmpt
-            if let windowScene = view.window?.windowScene {
-                SKStoreReviewController.requestReview(in: windowScene)
-            }
-        }
     }
 }
-
