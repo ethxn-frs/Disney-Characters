@@ -33,6 +33,10 @@
 		AA18BA9F2B55E6EF0016683A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA18BA9E2B55E6EF0016683A /* Extensions.swift */; };
 		AA18BAA12B5712340016683A /* CharacterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA18BAA02B5712340016683A /* CharacterCollectionViewCell.swift */; };
 		AA18BAA32B5713CD0016683A /* CharacterCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA18BAA22B5713CD0016683A /* CharacterCollectionViewCellViewModel.swift */; };
+		AA37B33D2B5D44A500A211C4 /* SettingsViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA37B33C2B5D44A500A211C4 /* SettingsViewViewModel.swift */; };
+		AA37B33F2B5D44F900A211C4 /* SettingsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA37B33E2B5D44F900A211C4 /* SettingsCellViewModel.swift */; };
+		AA37B3412B5D458800A211C4 /* SettingsOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA37B3402B5D458800A211C4 /* SettingsOption.swift */; };
+		AA37B3442B5D4D5500A211C4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA37B3432B5D4D5500A211C4 /* SettingsView.swift */; };
 		AAB088322B5BF0470055C1C4 /* CharacterPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB088312B5BF0470055C1C4 /* CharacterPhotoCollectionViewCell.swift */; };
 		AAB088342B5BF0540055C1C4 /* CharacterFilmCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB088332B5BF0540055C1C4 /* CharacterFilmCollectionViewCell.swift */; };
 		AAB088362B5BF05F0055C1C4 /* CharacterVideoGameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB088352B5BF05F0055C1C4 /* CharacterVideoGameCollectionViewCell.swift */; };
@@ -75,6 +79,10 @@
 		AA18BA9E2B55E6EF0016683A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		AA18BAA02B5712340016683A /* CharacterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewCell.swift; sourceTree = "<group>"; };
 		AA18BAA22B5713CD0016683A /* CharacterCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
+		AA37B33C2B5D44A500A211C4 /* SettingsViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewViewModel.swift; sourceTree = "<group>"; };
+		AA37B33E2B5D44F900A211C4 /* SettingsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCellViewModel.swift; sourceTree = "<group>"; };
+		AA37B3402B5D458800A211C4 /* SettingsOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsOption.swift; sourceTree = "<group>"; };
+		AA37B3432B5D4D5500A211C4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		AAB088312B5BF0470055C1C4 /* CharacterPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		AAB088332B5BF0540055C1C4 /* CharacterFilmCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterFilmCollectionViewCell.swift; sourceTree = "<group>"; };
 		AAB088352B5BF05F0055C1C4 /* CharacterVideoGameCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterVideoGameCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -151,6 +159,7 @@
 		AA077A962B55BBBD00DEABE9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AA37B3422B5D4D4100A211C4 /* SwiftUI */,
 				AAB0882F2B5BF00E0055C1C4 /* CharacterDetails */,
 				AAB088302B5BF0280055C1C4 /* Character */,
 				AA0A6D362B587E9D00AFB9FB /* FooterLoadingCollectionReusableView.swift */,
@@ -161,6 +170,7 @@
 		AA077A972B55BBC300DEABE9 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				AA37B33B2B5D448B00A211C4 /* Settings */,
 				AAB088372B5BF0750055C1C4 /* CharacterDetail */,
 				AA18BA9A2B55E3620016683A /* CharacterListViewViewModel.swift */,
 				AA18BAA22B5713CD0016683A /* CharacterCollectionViewCellViewModel.swift */,
@@ -235,6 +245,24 @@
 				AA18BA982B55E0650016683A /* GetAllCharactersResponse.swift */,
 			);
 			path = APIResponseTypes;
+			sourceTree = "<group>";
+		};
+		AA37B33B2B5D448B00A211C4 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				AA37B33C2B5D44A500A211C4 /* SettingsViewViewModel.swift */,
+				AA37B33E2B5D44F900A211C4 /* SettingsCellViewModel.swift */,
+				AA37B3402B5D458800A211C4 /* SettingsOption.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		AA37B3422B5D4D4100A211C4 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				AA37B3432B5D4D5500A211C4 /* SettingsView.swift */,
+			);
+			path = SwiftUI;
 			sourceTree = "<group>";
 		};
 		AAB0882F2B5BF00E0055C1C4 /* CharacterDetails */ = {
@@ -347,18 +375,22 @@
 				AA18BA942B55CFD00016683A /* EndPoint.swift in Sources */,
 				AAB088452B5C0A950055C1C4 /* CharacterTvShowCollectionViewCell.swift in Sources */,
 				AA18BA8A2B55CA810016683A /* VideoGameViewController.swift in Sources */,
+				AA37B33F2B5D44F900A211C4 /* SettingsCellViewModel.swift in Sources */,
 				AAB088322B5BF0470055C1C4 /* CharacterPhotoCollectionViewCell.swift in Sources */,
 				AAC421FC2B5C77BE00297E12 /* ApiCacheManager.swift in Sources */,
 				AA18BA922B55CF4E0016683A /* Request.swift in Sources */,
 				AA0A6D372B587E9D00AFB9FB /* FooterLoadingCollectionReusableView.swift in Sources */,
 				AA0A6D332B5876B200AFB9FB /* CharacterDetailView.swift in Sources */,
 				AA077A9C2B55BF8500DEABE9 /* FilmAndSerie.swift in Sources */,
+				AA37B3442B5D4D5500A211C4 /* SettingsView.swift in Sources */,
 				AA077AA02B55BFCE00DEABE9 /* VideoGame.swift in Sources */,
 				AA0A6D352B5876CB00AFB9FB /* CharacterDetailViewViewModel.swift in Sources */,
 				AAB088412B5C03680055C1C4 /* CharacterTvShowsCollectionViewCellViewModel.swift in Sources */,
+				AA37B33D2B5D44A500A211C4 /* SettingsViewViewModel.swift in Sources */,
 				AA0A6D312B58763400AFB9FB /* CharacterDetailViewController.swift in Sources */,
 				AA18BA882B55CA650016683A /* CharacterViewController.swift in Sources */,
 				AA18BA9D2B55E3B70016683A /* CharacterListView.swift in Sources */,
+				AA37B3412B5D458800A211C4 /* SettingsOption.swift in Sources */,
 				AA077A852B55BA7A00DEABE9 /* TabBarController.swift in Sources */,
 				AAB0883D2B5BF0ED0055C1C4 /* CharacterVideoGameCollectionViewCellViewModel.swift in Sources */,
 				AA18BA8E2B55CAA60016683A /* SettingViewController.swift in Sources */,

@@ -10,6 +10,12 @@ import UIKit
 
 /// Controller to show app options and settings
 final class SettingViewController: UIViewController {
+    
+    private let viewModel = SettingsViewViewModel(
+        cellViewModels: SettingsOption.allCases.compactMap({
+            return SettingsCellViewModel(type: $0)
+        })
+    )
 
     override func viewDidLoad() {
         super.viewDidLoad()
