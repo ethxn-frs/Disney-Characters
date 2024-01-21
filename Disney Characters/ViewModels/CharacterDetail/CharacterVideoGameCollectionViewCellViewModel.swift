@@ -6,14 +6,19 @@
 //
 
 import Foundation
+import UIKit
 
 final class CharacterVideoGameCollectionViewCellViewModel {
     
     public let value: String
+    public let title: String
+    public let iconImageView: UIImage
     
     init(
         value: String
     ) {
         self.value = value
+        self.title = "Video Game"
+        self.iconImageView = UIImage(systemName: "gamecontroller.fill")!
     }
 }

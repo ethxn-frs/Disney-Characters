@@ -13,6 +13,8 @@ final class Service {
     /// Shared singleton intance
     static let shared = Service()
     
+    private let cacheManager = ApiCacheManager()
+    
     /// Privatized constructor
     private init() {}
     
@@ -32,12 +34,27 @@ final class Service {
         expecting type: T.Type,
         completion: @escaping (Result<T, Error>) -> Void
     ){
+        if let cachedData = cacheManager.cachedResponse(
+            for: request.endpoint,
+            url: request.url
+        ){
+            do{
+                let result = try JSONDecoder().decode(type.self, from: cachedData )
+                completion(.success(result))
+            }
+            catch {
+                completion(.failure(error))
+            }
+            return
+        }
+        
         guard let urlRequest = self.request(from: request) else {
             print("failed to create request")
             completion(.failure(ServiceError.failedToCreateRequest))
             return
         }
-        let task = URLSession.shared.dataTask(with: urlRequest) { data, response, error in
+     
+        let task = URLSession.shared.dataTask(with: urlRequest) { [weak self] data, response, error in
             // Log the URL
             print("URL: \(urlRequest.url?.absoluteString ?? "N/A")")
 
@@ -65,6 +82,11 @@ final class Service {
             do {
                 let result = try JSONDecoder().decode(type.self, from: data ?? Data())
                 print("Decoding successful")
+                self?.cacheManager.setCache(
+                    for: request.endpoint,
+                        url: request.url,
+                        data: data ?? Data()
+                )
                 completion(.success(result))
             } catch {
                 print("Decoding error: \(error.localizedDescription)")

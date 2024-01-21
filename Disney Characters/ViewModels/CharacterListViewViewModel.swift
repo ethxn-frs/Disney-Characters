@@ -74,8 +74,9 @@ final class CharacterListViewViewModel: NSObject{
             print("Failed to create request")
             return
         }
-        Service.shared.execute(request,
-                               expecting: GetAllCharactersResponse.self) { [weak self] result in
+        Service.shared.execute(
+            request,
+            expecting: GetAllCharactersResponse.self) { [weak self] result in
             guard let strongSelf = self else {
                 return
             }

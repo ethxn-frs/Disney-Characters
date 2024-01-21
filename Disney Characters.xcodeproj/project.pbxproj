@@ -43,6 +43,7 @@
 		AAB088412B5C03680055C1C4 /* CharacterTvShowsCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB088402B5C03680055C1C4 /* CharacterTvShowsCollectionViewCellViewModel.swift */; };
 		AAB088432B5C0A480055C1C4 /* CharacterShortFilmCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB088422B5C0A480055C1C4 /* CharacterShortFilmCollectionViewCell.swift */; };
 		AAB088452B5C0A950055C1C4 /* CharacterTvShowCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB088442B5C0A950055C1C4 /* CharacterTvShowCollectionViewCell.swift */; };
+		AAC421FC2B5C77BE00297E12 /* ApiCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC421FB2B5C77BE00297E12 /* ApiCacheManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		AAB088402B5C03680055C1C4 /* CharacterTvShowsCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTvShowsCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
 		AAB088422B5C0A480055C1C4 /* CharacterShortFilmCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterShortFilmCollectionViewCell.swift; sourceTree = "<group>"; };
 		AAB088442B5C0A950055C1C4 /* CharacterTvShowCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTvShowCollectionViewCell.swift; sourceTree = "<group>"; };
+		AAC421FB2B5C77BE00297E12 /* ApiCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCacheManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				AA0A6D382B59D50200AFB9FB /* ImageLoader.swift */,
+				AAC421FB2B5C77BE00297E12 /* ApiCacheManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				AAB088452B5C0A950055C1C4 /* CharacterTvShowCollectionViewCell.swift in Sources */,
 				AA18BA8A2B55CA810016683A /* VideoGameViewController.swift in Sources */,
 				AAB088322B5BF0470055C1C4 /* CharacterPhotoCollectionViewCell.swift in Sources */,
+				AAC421FC2B5C77BE00297E12 /* ApiCacheManager.swift in Sources */,
 				AA18BA922B55CF4E0016683A /* Request.swift in Sources */,
 				AA0A6D372B587E9D00AFB9FB /* FooterLoadingCollectionReusableView.swift in Sources */,
 				AA0A6D332B5876B200AFB9FB /* CharacterDetailView.swift in Sources */,

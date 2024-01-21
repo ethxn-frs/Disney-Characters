@@ -24,7 +24,6 @@ class CharacterShortFilmCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
-        label.text = "Short Film"
         label.font = .systemFont(ofSize: 20, weight: .medium)
         return label
     }()
@@ -32,7 +31,6 @@ class CharacterShortFilmCollectionViewCell: UICollectionViewCell {
     private let iconImageView:UIImageView = {
         let icon = UIImageView()
         icon.translatesAutoresizingMaskIntoConstraints = false
-        icon.image = UIImage(systemName: "film.circle")
         icon.contentMode = .scaleAspectFit
         return icon
     }()
@@ -92,6 +90,8 @@ class CharacterShortFilmCollectionViewCell: UICollectionViewCell {
     
     public func configure(with viewModel: CharacterShortFilmCollectionViewCellViewModel ) {
         valueLabel.text = viewModel.value
+        titleLabel.text = viewModel.title
+        iconImageView.image = viewModel.iconImageView
     }
 }
 
